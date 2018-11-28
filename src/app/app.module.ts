@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 import { MetricsComponent } from './dashboard/metrics/metrics.component';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 
 @NgModule({
@@ -22,10 +24,12 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
     PageNotFoundComponent,
     DashboardComponent,
     DashboardHomeComponent,
-    MetricsComponent
+    MetricsComponent,
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BlogModule,
     DashboardRoutingModule,
     AppRoutingModule,
