@@ -1,0 +1,35 @@
+.dashboard {
+    background-color: #333;
+    color: white;
+}
+
+
+a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+a:link {
+    color: #ddd;
+}
+
+a:visited {
+    color: #ddd;
+}
+
+a:hover {
+    color: #777;
+}
+
+a.active {
+    color: rgb(223, 135, 35);
+}
+
+nav {
+    display: flex;
+}
+
+nav > a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
