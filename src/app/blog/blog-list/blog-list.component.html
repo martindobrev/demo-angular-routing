@@ -1,0 +1,4 @@
+<div *ngFor="let article of articles">
+  <h1>{{ article.title }}</h1>
+  <a routerLink="/article/{{article.id}}">read more</a>
+</div>
