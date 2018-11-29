@@ -11,6 +11,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { BlogModule } from './blog/blog.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
+import { AuthGuard } from './auth/auth.guard';
 
 
 @NgModule({
@@ -25,10 +27,11 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     FormsModule,
     BlogModule,
+    AuthModule,
     AdminModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
