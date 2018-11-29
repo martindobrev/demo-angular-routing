@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../../auth/auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   constructor(private authService: AuthService,
-    private router: Router) { }
+    private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
   logout() {
     console.log('LOGGING OUT...');
     this.authService.logout();
-    this.router.navigateByUrl('../');
+    this.router.navigate(['../'], { relativeTo: this.activatedRoute});
   }
 
 }

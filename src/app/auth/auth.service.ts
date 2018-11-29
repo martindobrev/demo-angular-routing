@@ -12,6 +12,10 @@ export class AuthService {
   // store the URL so we can redirect after logging in
   redirectUrl: string;
 
+  constructor() {
+    console.log('CONSTRUCTOR AUTH_SERVICE');
+  }
+
   login(): Observable<boolean> {
     return of(true).pipe(
       delay(1000),
