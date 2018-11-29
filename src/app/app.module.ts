@@ -9,11 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BlogModule } from './blog/blog.module';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
-import { MetricsComponent } from './dashboard/metrics/metrics.component';
-import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -22,16 +19,13 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    DashboardComponent,
-    DashboardHomeComponent,
-    MetricsComponent,
     ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BlogModule,
-    DashboardRoutingModule,
+    AdminModule,
     AppRoutingModule,
   ],
   providers: [],

@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h1>RESTRICTED AREA</h1>
+
+  <p>Here you can setup different application properties :)</p>
+  
+  <hr />
+  <nav >
+    <a routerLink="./" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <a routerLink="./articles" routerLinkActive="active">Manage Articles</a>
+    <a routerLink="./pages" routerLinkActive="active">Manage Pages</a>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  
+</div>

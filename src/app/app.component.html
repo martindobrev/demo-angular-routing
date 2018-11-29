@@ -10,8 +10,10 @@
     <a routerLink="/home" routerLinkActive="active">Home</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
     <a routerLink="/articles" routerLinkActive="active">Blog</a>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/dashboard" routerLinkActive="active">NOT EXISTING PAGE</a>
     <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
   </nav>
   <hr />
   <router-outlet></router-outlet>
