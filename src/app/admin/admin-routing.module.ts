@@ -23,9 +23,6 @@ const routes: Routes = [
         path: '', component: AdminDashboardComponent
       }]
     }]
-  }, {
-    path: 'login',
-    component: LoginComponent
   }
 ];
 

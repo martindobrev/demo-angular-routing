@@ -31,7 +31,7 @@ import { DialogService } from './dialog.service';
     AuthModule,
     AppRoutingModule,
   ],
-  providers: [CanDeactivateGuard, DialogService],
+  providers: [AuthGuard, CanDeactivateGuard, DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
