@@ -6,10 +6,11 @@ import { AdminPagesComponent } from './admin-pages/admin-pages.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { LoginComponent } from '../auth/login/login.component';
+import { CanDeactivateGuard } from '../can-deactivate.guard';
 
 const routes: Routes = [
   {
-    path: 'admin',
+    path: '',
     component: AdminComponent,
     canActivate: [AuthGuard],
     children: [{
@@ -17,7 +18,7 @@ const routes: Routes = [
       children: [{
         path: 'articles', component: AdminArticlesComponent
       }, {
-        path: 'pages', component: AdminPagesComponent
+        path: 'pages', component: AdminPagesComponent, canDeactivate: [CanDeactivateGuard]
       }, {
         path: '', component: AdminDashboardComponent
       }]

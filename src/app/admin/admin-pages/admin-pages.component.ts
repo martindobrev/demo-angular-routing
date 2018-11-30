@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DialogService } from './../../dialog.service';
 
 @Component({
   selector: 'app-admin-pages',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogService: DialogService) { }
 
   ngOnInit() {
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    return this.dialogService.confirm('Discard changes?');
   }
 
 }

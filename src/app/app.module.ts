@@ -10,9 +10,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './/app-routing.module';
 import { BlogModule } from './blog/blog.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthGuard } from './auth/auth.guard';
+import { CanDeactivateGuard } from './can-deactivate.guard';
+import { DialogService } from './dialog.service';
 
 
 @NgModule({
@@ -28,10 +29,9 @@ import { AuthGuard } from './auth/auth.guard';
     FormsModule,
     BlogModule,
     AuthModule,
-    AdminModule,
     AppRoutingModule,
   ],
-  providers: [AuthGuard],
+  providers: [CanDeactivateGuard, DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

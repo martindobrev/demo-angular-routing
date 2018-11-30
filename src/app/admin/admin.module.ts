@@ -6,11 +6,13 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminPagesComponent } from './admin-pages/admin-pages.component';
 import { AdminArticlesComponent } from './admin-articles/admin-articles.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthModule } from './../auth/auth.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    AuthModule
   ],
   declarations: [AdminDashboardComponent, AdminPagesComponent, AdminArticlesComponent, AdminComponent]
 })
